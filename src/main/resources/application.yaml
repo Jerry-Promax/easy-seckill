@@ -1,0 +1,34 @@
+server:
+  port: 8081
+
+# Spring相关配置
+spring:
+  application:
+    name: hmdp
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher # 支持swagger3
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/dianping?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+  redis:
+    host: 192.168.126.128
+    port: 6379
+#    password: 32345678
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+        time-between-eviction-runs: 10s
+  jackson:
+    default-property-inclusion: non_null # JSON处理时忽略非空字段
+
+# MyBatisPlus相关配置
+mybatis-plus:
+  type-aliases-package: com.hmdp.entity # 别名扫描包（这个好像没有必要）
+logging:
+  level:
+    com.hmdp: debug

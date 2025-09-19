@@ -1,0 +1,9 @@
+
+^	java:S119N"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(Ï“æ·
+e
+java:S3252V"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotBlank".(Ôù»ﬁ
+_	java:S119Å"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(´‹˚Ö
+c
+java:S3252Ü"LUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isBlank".(à∑êÇ
+c
+java:S3252®"LUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isBlank".(à∑êÇ
