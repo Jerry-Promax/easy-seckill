@@ -32,6 +32,15 @@ public class ShopServiceTest {
 
     @Resource
     private StringRedisTemplate stringRedisTemplate;
+    @Test
+    public void initSeckillStock() {
+        // 初始化 voucherId=1 的库存到 Redis
+        stringRedisTemplate.opsForValue().set("seckill:stock:1", "10");
+        stringRedisTemplate.opsForValue().set("seckill:stock:2", "5");
+        stringRedisTemplate.opsForValue().set("seckill:stock:3", "8");
+        stringRedisTemplate.opsForValue().set("seckill:stock:4", "3");
+        stringRedisTemplate.opsForValue().set("seckill:stock:5", "20");
+    }
 
     /**
      * 预热热点店铺数据，用于测试逻辑过期解决缓存击穿

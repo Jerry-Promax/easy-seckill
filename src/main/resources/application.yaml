@@ -14,7 +14,7 @@ spring:
     username: root
     password: 123456
   redis:
-    host: 192.168.126.128
+    host: 192.168.233.128
     port: 6379
 #    password: 32345678
     lettuce:
@@ -23,6 +23,16 @@ spring:
         max-idle: 10
         min-idle: 1
         time-between-eviction-runs: 10s
+  rabbitmq:
+    host: 192.168.233.128  # RabbitMQ 服务器地址（根据你的实际环境修改）
+    port: 5672             # AMQP 协议端口
+    username: guest
+    password: guest
+    virtual-host: /        # 虚拟主机
+    listener:
+      simple:
+        acknowledge-mode: manual  # 手动 ACK 模式
+        prefetch: 1               # 预取数量，每次只处理 1 条消息
   jackson:
     default-property-inclusion: non_null # JSON处理时忽略非空字段
 

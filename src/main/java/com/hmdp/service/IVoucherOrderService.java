@@ -24,5 +24,6 @@ public interface IVoucherOrderService extends IService<VoucherOrder> {
      * @param voucherOrder
      * @return
      */
-    void createVoucherOrder(VoucherOrder voucherOrder);
+    void createVoucherOrder(VoucherOrder voucherOrder) throws InterruptedException;
+
 }
