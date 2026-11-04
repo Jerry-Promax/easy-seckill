@@ -1,7 +1,3 @@
-# 黑马点评（hmdp）— Redis 高并发实战项目
-
-> **一句话定位**：以「大众点评/小红书」类本地生活平台为业务载体，系统性落地 **缓存、分布式锁、消息队列、布隆过滤器、GEO、BitMap、ZSet Feed 流** 等 Redis 中高并发方案的实战项目。
->
 > **技术栈**：JDK 1.8 · Spring Boot 2.6.4 · MyBatis-Plus 3.4.3 · MySQL · Redis（Lettuce + Redisson 3.13.6 + Lua + Guava BloomFilter）· RabbitMQ · Knife4j · Hutool
 >
 > **压测表现**：500 并发线程持续 60s，吞吐量 **2031.7 QPS**，平均响应 **217ms**，P99 **453ms**，**零超卖、零数据丢失**。
